@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
+
+
+* {
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Playfair Display SC', serif;
+}
+
+
+/* nav section */
+.nav {
+    padding: 1rem 1rem;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+}
+
+.nav-ele {
+    font-family: 'Playfair Display SC', serif;
+    color: white;
+}
+
+.nav-ele a {
+    color: white;
+    padding-left: 1rem;
+    text-decoration: none;
+}
+
+/* .nav-ele a:hover,
+.nav-ele a:focus,
+.nav-ele a:active {
+    text-decoration: underline;
+} */
+
+
+.nav div:nth-child(2) {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav div:nth-child(3) {
+    display: flex;
+    /* border: 1px solid red; */
+}
+
+.nav-ele-link {
+    font-family: 'Playfair Display SC', serif;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+.nav-ele-link a {
+    color: white;
+    font-size: 1rem;
+    padding-left: 1rem;
+    text-decoration: none;
+}
+
+.nav-ele-link a:hover,
+.nav-ele-link a:focus,
+.nav-ele-link a:active {
+    text-decoration: underline;
+}
+
+/* end of nav section  */
+
+
+
+/* footer section  */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* .footer div{
+    border: 1px solid red;
+} */
+
+.footer-text {
+    font-size: 1rem;
+}
+
+.footer-link {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-link i {
+    padding-left: 1rem;
+}
+
+/* end of footer section  */
+
+
+/* @media screen and (max-width: 600px) {
+    .container3 { flex-direction: column; }
+    .overview h2 { text-align: center; }
+    .backimg {
+      padding-top: 12rem;
+    padding-bottom: 12rem;}
+    .title h1 { max-width: 100px;
+    }
+} */
