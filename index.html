@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Basics</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="https://kit.fontawesome.com/6d50ef10e6.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav-ele">
+                <a>PORTFOLIO 2023</a>
+            </div>
+
+            <div class="nav-ele">
+                <a href="index.html">Ann Yan</a>
+            </div>
+
+            <div class="nav-ele">
+                <div class="nav-ele-link">
+                    <a href="#">case studies</a>
+                    <!-- </div>
+                <div class="nav-ele-link"> -->
+                    <a href="#">contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="intro">
+        <img src="image/trans-por.PNG" class="portrait" onmouseover="window.showImage()"
+            onmouseout="window.hideImage()">
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Your existing JS code here
+
+                // Define the functions in the global scope or attach them to the window object
+                window.showImage = function () {
+                    portrait.style.zIndex = 2;
+                    line1.classList.add('fade-out');
+                    line2.classList.add('fade-out');
+                    // line1.style.opacity = 0.5;
+                    // line2.style.opacity = 0.5;
+                };
+
+                window.hideImage = function () {
+                    portrait.style.zIndex = 1;
+                    line1.classList.remove('fade-out');
+                    line2.classList.remove('fade-out');
+                };
+
+                window.addEventListener('scroll', checkFade);
+            });
+        </script>
+
+            <div class="sentence" id="line1">
+                <p>A Website Developer</p>
+            </div>
+            <div class="sentence" id="line2">
+                <p>Based in Vancouver</p>
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+
+    <div class="intro-para">
+        <div class="para-title">
+            <h2 class="title">Hello it's me,
+                <br>Ann Yan
+            </h2>
+            <a href="#project">my project</a>
+        </div>
+        <div><p class="fade-in-para">A passionate and creative website developer with a keen 
+            eye for design and a love for crafting immersive digital experiences. With 
+            a solid foundation in front-end and back-end development, I pride myself on 
+            turning ideas into stunning, functional websites that leave a lasting impression.
+        </p>
+    </div>
+    </div>
+
+
+    <div class="project1" id="project">
+        <div class="intro-sec">
+            <h2>App Develop</h2>
+            <h3>Easy Accounting</h3>
+            <p class="p1-intro">A bookkeeping application is designed specifically for
+                beginners who want to start managing their finances in a planned and
+                reasonable manner. With a minimalistic interface and convenient bookkeeping
+                functions, the app is easy to use and accessible for users who have little
+                to no experience with bookkeeping.
+            </p>
+            <p class="tool-used">
+                <br>#Android Studio
+                <br>#Figma
+            </p>
+            <a href="project1.html">learn more</a>
+        </div>
+
+        <div class="phone-container">
+            <div class="phone-screen">
+                <img src="image/ea-homepage.png" width="250px" height="450px">
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="project2">
+        <div class="intro-sec2">
+            <h2>Database</h2>
+            <h3>sVap</h3>
+            <p class="p2-intro">Svap, a website based in the Greater Vancouver area
+                for people to trade items with others. Users are allowed to post the item
+                they want to trade and show others what kind of item they want to trade with.
+                Users can also browse through the posts on the site to find the item they
+                might be interested in trading with. Our website also has a built-in chat
+                that allows users to contact the traders by asking questions and or arranging
+                a meet up for trading.
+            </p>
+            <p class="tool-used2">
+                <br>#PHP & HTML
+                <br>#CSS
+                <br>#AJAX
+                <br>#JQUERY
+                <br>#SQL Database
+                <br>#Figma
+            </p>
+            <a href="project2.html">learn more</a>
+        </div>
+
+        <div class="p2-image">
+            <img src="image/s-home.png">
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+
+<footer>
+    <div class="footer">
+        <div class="footer-text">
+            <span>Designed & Developed by Ann Yan 2023</span>
+        </div>
+        <div class="footer-link">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-regular fa-envelope"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+        </div>
+    </div>
+</footer>
+
+</html>
