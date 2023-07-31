@@ -34,8 +34,27 @@
         </nav>
     </header>
 
-    <div class="intro">
+    <div class="intro2">
         <h2>sVap</h2>
+
+        <div class="project-asbtract">
+            <div>
+                <h3>Team:</h3> 
+                <h4>Han Yan, Baolati Pazeli </h4>
+            </div>
+            <div>
+                <h3>Role: </h3> 
+                <h4>designer, programmer</h4>
+            </div>
+            <div>
+                <h3>Project: </h3>
+                <h4>App developing</h4> 
+            </div>
+            <div>
+                <h3>Date: </h3>
+                <h4>3/30/2023</h4>
+            </div>
+        </div>
     </div>
 
     <!-- <div class="screen">
@@ -70,7 +89,7 @@
         </div>
 
         <div class="basic-function">
-            <h2>SQL Database</h2>
+            <h2>How to go through</h2>
             <p> We created a signup and log-in function for users to register their
                 accounts and used shared preference to store the user information so
                 that they can view their previous receipts when they log in. The shared
@@ -94,7 +113,7 @@
                 will be shown in the recycler view.</p>
         </div>
 
-        <div class="standard-function">
+        <!-- <div class="standard-function">
             <h2>SQL Database</h2>
             <h3>Member</h3>
             <p> The member table is to store the members’ personal information and be identified
@@ -124,11 +143,15 @@
             <p> The category in the want_to_trade table is to store what type of goods the user
                 wants to exchange. The post_id and email are for it to connect with the member
                 table and post table.</p>
-        </div>
+        </div> -->
 
 
         <div class="standard-function">
             <h2>Implementation Details</h2>
+            <div class="log-sign-img">
+                <img src="image/svap/login.png" >
+                <img src="image/svap/signup.png">
+            </div>
             <h3>Login</h3>
             <h4>Backend support</h4>
             <p> When the backend receives the data that user input from the login form, it will
@@ -172,6 +195,12 @@
             </p>
 
             <h3>Browse</h3>
+
+            <div class="log-sign-img">
+                <img src="image/svap/filter.png" >
+                <img src="image/svap/filter2.png">
+            </div>
+
             <h4>Backend support</h4>
             <p> The backend will fetch all the post data from the database and render them on the
                 page based on the input in search and filter that user entered. By default, it
@@ -192,6 +221,12 @@
             </p>
 
             <h3>Add a New Post</h3>
+
+            <div class="log-sign-img">
+                <img src="image/svap/newpo.png" >
+                <img src="image/svap/newpo2.png">
+            </div>
+
             <h4>Backend support</h4>
             <p> With the input data from the user, the backend will firstly insert all the basic
                 data to the post table and want_to_trade table. Then the backend will add the input
@@ -211,6 +246,12 @@
             </p>
 
             <h3>Chat</h3>
+
+            <div class="log-sign-img">
+                <img src="image/svap/chat.png" >
+                <img src="image/svap/detail.png">
+            </div>
+
             <h4>Backend support</h4>
             <p> The backend uses a different query to fetch or modify the data from the database
                 based on the request command. The included command includes get contact, get
@@ -232,6 +273,71 @@
                 email (login user) and receiver email (the current active contact element), and
                 then if the response is successful, add the chat message to the message container
                 on the page.
+            </p>
+
+
+
+            <h3>View Page Detail</h3>
+
+            <h4>Backend support</h4>
+            <p> The backend will get the post detail information from the database with the post 
+                id which is included in the get request. Then respond with a string of html 
+                elements to render the elements at the front end. Moreover, if the user is logged 
+                in and not the owner of the post, a like/unlike button element will be added to 
+                the string based on if this post is in the collection table or not. If this user 
+                is the owner of the post a delete button will be added to the string.. If the user 
+                did not log in, no button will be added to the string.</p>
+
+            <h4>Front end dynamic support/ajax</h4>
+            <p>If the user clicks on the like button, the request will be sent via AJAX to add the 
+                post to the database. If the response is successful, then Jquery will change the 
+                like button to unlike button. If the button is delete, then send the delete request 
+                via AJAX, if it is successful, then direct the user to the main page. If the user 
+                clicks on the message button, the user will be directed to the chat page and initialize 
+                a chat.
+            </p>
+
+
+            <h3>Add/Remove Favorite Posts /View Favourites</h3>
+
+            <div class="log-sign-img">
+                <img src="image/svap/add:remove.png" >
+                <img src="image/svap/delete.png">
+            </div>
+
+            <h4>Backend support</h4>
+            <p> When an add or remove favorite post request is sent to the backend, the query will 
+                be executed to insert/delete the post id with user email from the collection database. 
+                If the user did the operation through the view's favorite page, a response with the 
+                new string containing a list of collection post elements will be sent.</p>
+
+            <h4>Front end dynamic support/ajax</h4>
+            <p>If the user clicks on the like button, the request will be sent via AJAX to add the 
+                post to the database. If the response is successful, then Jquery will change the like 
+                button to unlike button. If the user clicks on the unlike button, the request will be 
+                sent via AJAX to remove the post from the collection table. If the response is successful, 
+                then Jquery will change the unlike button to like button. If the user is at the view's 
+                favorite list page, the backend will replace the list container with the new list of post 
+                items from the AJAX response and display them on the page.
+            </p>
+
+
+
+            <h3>Delete Post/View my post</h3>
+
+            <h4>Backend support</h4>
+            <p> When an add or remove post request is sent to the backend, the query will be executed 
+                to insert/delete the data with the input post id from the post, image_path, collection 
+                and want_to_trade table. Then the backend will delete the image folder and all the files 
+                inside related to the file path which contains user id the post as folder. Then the backend 
+                gets the new list of posts the user has posted and responds with a string containing the 
+                html elements of the post list.</p>
+
+            <h4>Front end dynamic support/ajax</h4>
+            <p>If the user clicks on the delete button, the Javascript sends the request via AJAX to the 
+                backend for deleting the data. If the request is successfully done, the Jquery will replace 
+                the elements in the list container with the response data to show the updated list of post
+                data after the deletion on the web page.
             </p>
         </div>
 

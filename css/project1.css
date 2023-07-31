@@ -1,14 +1,22 @@
 .intro {
-    padding: 30vh 0;
-    /* border: 1px solid red; */
-    margin-top: 2rem;
-    text-align: center;
+    padding: 10vh 0;
+    margin: 0 5rem;
 }
 
 
 .intro h2 {
     font-size: 3rem;
     font-style: bold;
+    text-align: start;
+    margin-bottom: 10vh;
+}
+
+.intro div {
+    justify-content: end;
+}
+
+.project-asbtract div {
+    display: flex;
 }
 
 
@@ -16,7 +24,7 @@
 .screen-sec {
     display: flex;
     justify-content: space-around;
-    margin:1rem 2rem;
+    margin: 1rem 2rem;
     /* transform-style: preserve-3d; */
 }
 
@@ -91,7 +99,7 @@
 }
 
 .standard-function h3 {
-    text-align:left;
+    text-align: left;
     margin-left: 10vw;
     margin-top: 5rem;
 }
@@ -115,7 +123,7 @@
 }
 
 .challenge h3 {
-    text-align:left;
+    text-align: left;
     margin-left: 10vw;
     margin-top: 5rem;
 }
@@ -129,13 +137,14 @@
 
 
 @media screen and (max-width: 1100px) {
+
     /* Adjust the margin and set flex direction to column for smaller screens */
     .screen-sec {
         flex-wrap: wrap;
         margin: 5rem 2rem;
     }
 
-    .screen-sec img{
+    .screen-sec img {
         margin-top: 1rem;
     }
 }
