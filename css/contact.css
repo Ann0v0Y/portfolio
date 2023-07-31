@@ -1,0 +1,53 @@
+.contact-sec {
+    display: flex;
+    /* justify-content: space-between; */
+    margin: 3rem 7rem;
+}
+
+.img-me img {
+    max-width: 70%;
+    height: auto;
+}
+
+
+/* .nav-ele {
+    text-decoration: none;
+}
+
+.nav-ele:hover,
+.nav-ele:focus,
+.nav-ele:active {
+    text-decoration: underline;
+} */
+
+.contact-info {
+    margin-bottom: 3rem;
+}
+
+.contact-info input {
+    width: 40vw;
+    padding: 1rem;
+}
+
+.contact-info a {
+    padding-top: 3rem;
+}
+
+#submit{
+    text-decoration: none;
+}
+
+#submit:hover, #submit:focus, #submit:active{
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 1150px) {
+    .img-me{
+        display: none;
+    }
+
+    .contact-info input{
+        width: 70vw;
+    }
+}

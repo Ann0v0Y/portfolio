@@ -31,11 +31,55 @@ h4 {
     color: white;
 }
 
-.nav-ele a {
+.nav-ele a,
+.nav-ele-link a {
     color: white;
     padding-left: 1rem;
     text-decoration: none;
 }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    /* background-color: #EDEAE3; */
+    border: 2px solid white;
+    min-width: 100px;
+}
+
+.dropdown-content a {
+    font-family: 'sf';
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Add underline animation */
+.dropdown-content a::after{
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: white;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.dropdown-content a:hover::after{
+    width: 100%;
+}
+
+.nav-main-contact:hover{
+text-decoration: underline;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-main {
+    margin-right: 20px;
+}
+
 
 /* .nav-ele a:hover,
 .nav-ele a:focus,
@@ -68,11 +112,11 @@ h4 {
     text-decoration: none;
 }
 
-.nav-ele-link a:hover,
+/* .nav-ele-link a:hover,
 .nav-ele-link a:focus,
 .nav-ele-link a:active {
     text-decoration: underline;
-}
+} */
 
 /* end of nav section  */
 

@@ -25,10 +25,20 @@
 
             <div class="nav-ele">
                 <div class="nav-ele-link">
-                    <a href="#">case studies</a>
+
+                    <div class="dropdown">
+                        <a href="styleguide.html" class="nav-main">case studies</a>
+                        <!-- <span class="classes-icon"><img src="arrow.png" width="20"> </span> -->
+                        <div class="dropdown-content">
+                          <a href="project1.html">Easy Accounting</a>
+                          <a href="project2.html">sVap</a>
+                        </div>
+                      </div>
+
+
                     <!-- </div>
                 <div class="nav-ele-link"> -->
-                    <a href="#">contact</a>
+                    <a href="contact.html" class="nav-main-contact">contact</a>
                 </div>
             </div>
         </nav>
@@ -39,20 +49,20 @@
 
         <div class="project-asbtract">
             <div>
-                <h3>Team:</h3> 
-                <h4>Han Yan, Baolati Pazeli </h4>
+                <h3>Team:</h3>
+                <h4>Han Yan, Chongyuan Bian, Jason Liu</h4>
             </div>
             <div>
-                <h3>Role: </h3> 
+                <h3>Role: </h3>
                 <h4>designer, programmer</h4>
             </div>
             <div>
                 <h3>Project: </h3>
-                <h4>App developing</h4> 
+                <h4>Website developing with database</h4>
             </div>
             <div>
                 <h3>Date: </h3>
-                <h4>3/30/2023</h4>
+                <h4>9/12/2022</h4>
             </div>
         </div>
     </div>
@@ -149,7 +159,7 @@
         <div class="standard-function">
             <h2>Implementation Details</h2>
             <div class="log-sign-img">
-                <img src="image/svap/login.png" >
+                <img src="image/svap/login.png">
                 <img src="image/svap/signup.png">
             </div>
             <h3>Login</h3>
@@ -197,7 +207,7 @@
             <h3>Browse</h3>
 
             <div class="log-sign-img">
-                <img src="image/svap/filter.png" >
+                <img src="image/svap/filter.png">
                 <img src="image/svap/filter2.png">
             </div>
 
@@ -223,7 +233,7 @@
             <h3>Add a New Post</h3>
 
             <div class="log-sign-img">
-                <img src="image/svap/newpo.png" >
+                <img src="image/svap/newpo.png">
                 <img src="image/svap/newpo2.png">
             </div>
 
@@ -248,7 +258,7 @@
             <h3>Chat</h3>
 
             <div class="log-sign-img">
-                <img src="image/svap/chat.png" >
+                <img src="image/svap/chat.png">
                 <img src="image/svap/detail.png">
             </div>
 
@@ -280,20 +290,20 @@
             <h3>View Page Detail</h3>
 
             <h4>Backend support</h4>
-            <p> The backend will get the post detail information from the database with the post 
-                id which is included in the get request. Then respond with a string of html 
-                elements to render the elements at the front end. Moreover, if the user is logged 
-                in and not the owner of the post, a like/unlike button element will be added to 
-                the string based on if this post is in the collection table or not. If this user 
-                is the owner of the post a delete button will be added to the string.. If the user 
+            <p> The backend will get the post detail information from the database with the post
+                id which is included in the get request. Then respond with a string of html
+                elements to render the elements at the front end. Moreover, if the user is logged
+                in and not the owner of the post, a like/unlike button element will be added to
+                the string based on if this post is in the collection table or not. If this user
+                is the owner of the post a delete button will be added to the string.. If the user
                 did not log in, no button will be added to the string.</p>
 
             <h4>Front end dynamic support/ajax</h4>
-            <p>If the user clicks on the like button, the request will be sent via AJAX to add the 
-                post to the database. If the response is successful, then Jquery will change the 
-                like button to unlike button. If the button is delete, then send the delete request 
-                via AJAX, if it is successful, then direct the user to the main page. If the user 
-                clicks on the message button, the user will be directed to the chat page and initialize 
+            <p>If the user clicks on the like button, the request will be sent via AJAX to add the
+                post to the database. If the response is successful, then Jquery will change the
+                like button to unlike button. If the button is delete, then send the delete request
+                via AJAX, if it is successful, then direct the user to the main page. If the user
+                clicks on the message button, the user will be directed to the chat page and initialize
                 a chat.
             </p>
 
@@ -301,23 +311,23 @@
             <h3>Add/Remove Favorite Posts /View Favourites</h3>
 
             <div class="log-sign-img">
-                <img src="image/svap/add:remove.png" >
+                <img src="image/svap/add:remove.png">
                 <img src="image/svap/delete.png">
             </div>
 
             <h4>Backend support</h4>
-            <p> When an add or remove favorite post request is sent to the backend, the query will 
-                be executed to insert/delete the post id with user email from the collection database. 
-                If the user did the operation through the view's favorite page, a response with the 
+            <p> When an add or remove favorite post request is sent to the backend, the query will
+                be executed to insert/delete the post id with user email from the collection database.
+                If the user did the operation through the view's favorite page, a response with the
                 new string containing a list of collection post elements will be sent.</p>
 
             <h4>Front end dynamic support/ajax</h4>
-            <p>If the user clicks on the like button, the request will be sent via AJAX to add the 
-                post to the database. If the response is successful, then Jquery will change the like 
-                button to unlike button. If the user clicks on the unlike button, the request will be 
-                sent via AJAX to remove the post from the collection table. If the response is successful, 
-                then Jquery will change the unlike button to like button. If the user is at the view's 
-                favorite list page, the backend will replace the list container with the new list of post 
+            <p>If the user clicks on the like button, the request will be sent via AJAX to add the
+                post to the database. If the response is successful, then Jquery will change the like
+                button to unlike button. If the user clicks on the unlike button, the request will be
+                sent via AJAX to remove the post from the collection table. If the response is successful,
+                then Jquery will change the unlike button to like button. If the user is at the view's
+                favorite list page, the backend will replace the list container with the new list of post
                 items from the AJAX response and display them on the page.
             </p>
 
@@ -326,16 +336,16 @@
             <h3>Delete Post/View my post</h3>
 
             <h4>Backend support</h4>
-            <p> When an add or remove post request is sent to the backend, the query will be executed 
-                to insert/delete the data with the input post id from the post, image_path, collection 
-                and want_to_trade table. Then the backend will delete the image folder and all the files 
-                inside related to the file path which contains user id the post as folder. Then the backend 
-                gets the new list of posts the user has posted and responds with a string containing the 
+            <p> When an add or remove post request is sent to the backend, the query will be executed
+                to insert/delete the data with the input post id from the post, image_path, collection
+                and want_to_trade table. Then the backend will delete the image folder and all the files
+                inside related to the file path which contains user id the post as folder. Then the backend
+                gets the new list of posts the user has posted and responds with a string containing the
                 html elements of the post list.</p>
 
             <h4>Front end dynamic support/ajax</h4>
-            <p>If the user clicks on the delete button, the Javascript sends the request via AJAX to the 
-                backend for deleting the data. If the request is successfully done, the Jquery will replace 
+            <p>If the user clicks on the delete button, the Javascript sends the request via AJAX to the
+                backend for deleting the data. If the request is successfully done, the Jquery will replace
                 the elements in the list container with the response data to show the updated list of post
                 data after the deletion on the web page.
             </p>
