@@ -29,10 +29,10 @@
                         <a href="styleguide.html" class="nav-main">case studies</a>
                         <!-- <span class="classes-icon"><img src="arrow.png" width="20"> </span> -->
                         <div class="dropdown-content">
-                          <a href="project1.html">Easy Accounting</a>
-                          <a href="project2.html">sVap</a>
+                            <a href="project1.html">Easy Accounting</a>
+                            <a href="project2.html">sVap</a>
                         </div>
-                      </div>
+                    </div>
 
 
                     <!-- </div>
@@ -48,16 +48,16 @@
 
         <div class="project-asbtract">
             <div>
-                <h3>Team:</h3> 
+                <h3>Team:</h3>
                 <h4>Han Yan, Baolati Pazeli </h4>
             </div>
             <div>
-                <h3>Role: </h3> 
+                <h3>Role: </h3>
                 <h4>designer, programmer</h4>
             </div>
             <div>
                 <h3>Project: </h3>
-                <h4>App developing</h4> 
+                <h4>App developing</h4>
             </div>
             <div>
                 <h3>Date: </h3>
@@ -67,120 +67,179 @@
 
     </div>
 
-    <div class="screen">
-        <div class="screen-sec">
-            <img class="screem-img" src="image/ea-account.png">
-            <img class="screem-img" src="image/ea-homepage.png">
-            <img class="screem-img" src="image/ea-home.png">
-            <img class="screem-img" src="image/ea-balance.png">
-            <img class="screem-img" src="image/ea-map.png">
-        </div>
+    <div class="container">
+        <img class="image image1" src="image/P1/account-new.png" alt="Image 1" style="top: 0%;">
+        <img class="image image2" src="image/P1/adding-new.png" alt="Image 2" style="top: 0%;">
+        <img class="image image2" src="image/P1/yahoo.png" alt="Image 2" style="top: 0%;">
+        <img class="image image2" src="image/P1/balance-new.png" alt="Image 2" style="top: 0%;">
+        <img class="image image2" src="image/P1/map-search.png" alt="Image 2" style="top: 0%;">
     </div>
+    <script src="project1.js"></script>
 
 
     <div class="detail-section">
         <div class="overview">
-            <h2>Overview</h2>
-            <p>Our bookkeeping application is designed specifically for beginners
-                who want to start managing their finances in a planned and reasonable
-                manner. With a minimalistic interface and convenient bookkeeping functions,
-                the app is easy to use and accessible for users who have little to no
-                experience with bookkeeping.</p>
-            <p>The application includes expenditure and income classification, a map
-                function that allows users to capture the location of their transactions
-                and make receipts more detailed, a calculator for accurate calculations,
-                and the latest financial news to help users stay informed about the market.
-                Our app provides an intuitive way for users to view their balance and be more
-                actively involved in bookkeeping and planning in a more convenient way.</p>
-            <p>Overall, our bookkeeping app offers an easy, simple, and fast solution for
-                beginners who want to take control of their finances and plan for a better
-                future. With our app, users can get started quickly and easily, without the
-                need for extensive bookkeeping experience or knowledge.</p>
+            <p>We created several functions for this accounting app by using Android Studio.
+                Including basic functions for user to record their balance, keep their own records
+                and other extra functions to help them use the app easier.</p>
         </div>
 
         <div class="basic-function">
             <h2>Basic Function</h2>
-            <p> We created a signup and log-in function for users to register their
-                accounts and used shared preference to store the user information so
-                that they can view their previous receipts when they log in. The shared
-                preference was also used for getting the data of specific receipts of a
-                specific user by checking the user_email. </p>
-            <p>We create a balance activity for users to manage their receipts by using
-                a recycler view to show it. Users can add a new receipt by clicking the add
-                button and they need to choose only one type of either expenditure or income,
-                date and amount to save the receipt successfully. Otherwise, toasted messages
-                will hint to them to complete the missing one. </p>
-            <p> If users choose two types for expenditure and income, respectively, the
-                checked button will be cleared when they click the save button and they can
-                choose again with a toasted message as a hint. We created two groups of buttons
-                by radio group.</p>
-            <p> We created a pop-up window for users to choose a date. The calendar date was
-                set until the current date so that users can only choose the date of today or
-                the previous date. The date function was triggered by clicking the date button.
-                The amount EditText was for users to enter numbers by using a numeric keypad
-                and comments for users to enter anything they wanted to note. </p>
-            <p> Once they finish and click the Done button, they can save the receipt, which
-                will be shown in the recycler view.</p>
+            <div class="basic-signin">
+                <div class="signin-img-sec">
+                    <img src="image/ea-home.png" alt="">
+                    <img src="image/ea-homepage.png" alt="">
+                    <img src="image/P1/account-new.png" alt="">
+                </div>
+                <div class="signin-intro">
+                    <p> For users to register their accounts and used shared preference to store
+                        the user information so that they can view their previous receipts when
+                        they log in. The shared preference was also used for getting the data of
+                        specific receipts of a specific user by checking the user_email.</p>
+                </div>
+            </div>
+
+
+            <div class="basic-balance">
+                <div class="balance-img-sec">
+                    <img src="image/ea-home.png" alt="">
+                    <img src="image/ea-homepage.png" alt="">
+                </div>
+                <div class="balance-intro">
+                    <p> For users to manage their receipts by using a recycler view to show it.
+                        Users can add a new receipt by clicking the add button and they need to
+                        choose only one type of either expenditure or income, date and amount to
+                        save the receipt successfully. Otherwise, toasted messages will hint to
+                        them to complete the missing one.</p>
+                </div>
+            </div>
+
+
+            <div class="basic-video">
+                <div class="video-img-sec">
+                    <img src="image/ea-home.png" alt="">
+                </div>
+                <div class="video-intro">
+                    <p> Users can only select one type for a record . Otherwise the selection will
+                        be cleared when they click save, accompanied by a toast message.</p>
+                    <p>A popup window for the user to select a date, default as the current date.
+                        The user can only select today's date or the previous day's date. </p>
+                    <p>The Amount is for users to enter numbers using the numeric keypad and provides
+                        comments for the user to enter whatever they want to record.</p>
+                    <p>Once users are done and click the Done button, they can save the receipt and
+                        the receipt will be displayed in the previous page.</p>
+                </div>
+            </div>
         </div>
+
 
         <div class="standard-function">
             <h2>Standard Function</h2>
-            <h3>In Balance Page</h3>
-            <p> We create 5 image buttons at the button for users to either add the new receipt
-                or trigger them to other pages by using explicit intent.</p>
-            <p>For users who want to revise their receipt, they can click the specific one and
-                view detailed information of the one.They can click the delete button to delete
-                the one but they will be able to edit the receipt after they click the edit button. </p>
-            <p> The calculate button is for the user to calculate the
-                accurate amount. We created a calculator in our app and
-                connected them with explicit intent. Once users finish
-                calculating the amount, they can click the “Keep it!” button to
-                back to the previous adding page and the result they calculate will show the
-                amount EditText automatically. Additionally, users can also calculate by clicking
-                the calculate button in the homepage and then enter the adding page directly.</p>
-            <p> The map button is for users to get their current location and they can also search
-                any location they want. We created it by the idea that sometimes users are not
-                familiar with the ambient environment, especially when they are traveling, while
-                these are probably the times when they spend the most and records are most necessary.
-                In that case, commenting their current location as a hint might help. This was also
-                created by explicit intent. </p>
-
-            <h3>In Finding Page</h3>
-            <p> We created the activity mainly relying on implicit intent. Our original intention
-                is to allow users to keep track of their bills while also getting some real-time
-                financial news and financial knowledge through our software. That way they can
-                better manage their finances. We've also added links to live exchange rate queries
-                in case users might have receipts of foreign exchange receipts and expenditures.</p>
+            <div class="standard-cal">
+                <div class="cal-img-sec">
+                    <img src="image/ea-home.png" alt="">
+                    <img src="image/ea-homepage.png" alt="">
+                    <img src="image/P1/account-new.png" alt="">
+                </div>
+                <div class="cal-intro">
+                    <p> Users can either use the calculator to calculate the amount by entering the
+                        page via homepage or adding page.</p>
+                    <p>After getting the amount, user can click KEEP IT to save the number directly.</p>
+                    <p>Users can click ‘back’ to back to homepage as well.</p>
+                </div>
+            </div>
 
 
-            <h3>In Account Page</h3>
-            <p> User could log out from account page by clicking log out button or go back to
-                home page using back button which is function of explicit intent.</p>
-            <p>Light sensor: We used light sensor to switch the light and dark mode for our
-                application.</p>
+            <div class="standard-map">
+                <div class="map-img-sec">
+                    <img src="image/ea-home.png" alt="">
+                    <img src="image/ea-homepage.png" alt="">
+                </div>
+                <div class="map-intro">
+                    <p> Users can either use the map to record comment by entering the page via
+                        homepage or adding page. When they are around ambient environment, especially
+                        when they are traveling, which probably are the times when they spend the
+                        most and records are most necessary. </p>
+                    <p>The initial location is the current location of the user.</p>
+                    <p>Users can search the specific location by input address.</p>
+                </div>
+            </div>
+
+
+            <div class="standard-finding">
+                <div class="finding-img-sec">
+                    <img src="image/ea-home.png" alt="">
+                    <img src="image/ea-home.png" alt="">
+                </div>
+                <div class="finding-intro">
+                    <p> The activity mainly relying on implicit intent. Our original intention is to
+                        allow users to keep track of their bills while also getting some real-time
+                        financial news and financial knowledge through our software. That way they
+                        can better manage their finances. </p>
+                    <p>There’s also a link to live exchange rate queries in case users might have
+                        receipts of foreign exchange receipts and expenditures.</p>
+                </div>
+            </div>
+
+
+            <div class="standard-mode">
+                <div class="mode-img-sec">
+                    <img src="image/ea-home.png" alt="">
+                    <img src="image/ea-home.png" alt="">
+                    <img src="image/ea-home.png" alt="">
+                </div>
+                <div class="mode-intro">
+                    <p> Users can log out in account page.</p>
+                    <p>The mode will switch when light constant reach to 20000 lux.</p>
+                </div>
+            </div>
         </div>
 
 
+
+
         <div class="challenge">
-            <h2>Challenge</h2>
-            <p> During the implementation of our bookkeeping application, we encountered an
-                interesting challenge related to the display of receipt data from multiple
-                users. Specifically, we found that all receipt data from different users were
-                being shown together in the RecyclerView since we had just users table and
-                receipts table in our database, which was not ideal. </p>
-            <h2>Solution</h2>
-            <p>Creating a separate table for each user was not a practical solution, as this
-                would have caused serious data redundancy and made it difficult to manage and
-                organize the data. Instead, we implemented a foreign key SQLite statement to
-                connect the receipts table to a separate user table. </p>
-            <p> By adding user_email as the primary key of users table and foreign key to the
-                receipts table, we were able to link each receipt record to the corresponding
-                user record. This allowed us to display only the receipt data for the currently
-                logged-in user, rather than showing all receipt data from all users.</p>
-            <p> This solution not only resolved the challenge of displaying receipt data from
-                multiple users, but it also improved the overall organization and management
-                of the data in our app. It was a valuable learning experience that helped us
-                improve our skills in database management and data organization.</p>
+            <div class="prob">
+                <h2>Challenge</h2>
+                <p> During the implementation of our bookkeeping application, we encountered an
+                    interesting challenge related to the display of receipt data from multiple
+                    users. Specifically, we found that all receipt data from different users were
+                    being shown together in the RecyclerView since we had just users table and
+                    receipts table in our database, which was not ideal.</p>
+            </div>
+            <div class="solution">
+                <h2>Solution</h2>
+                <p>Creating a separate table for each user is not a practical solution as it would
+                    lead to severe data redundancy and make managing and organizing data difficult.
+                    Instead, we implemented a foreign key SQLite statement that joins the receipts
+                    table to a separate user table. By adding user_email as a primary key to the
+                    user table and a foreign key to the receipts table, we were able to link each
+                    receipt record to the corresponding user record. This allows users to view receipt
+                    data for their account only.</p>
+                <p> This solved the challenge of displaying receipt data from multiple users and also
+                    improved the overall organization and management of data in our application.</p>
+            </div>
+        </div>
+
+
+        <div class="summary">
+            <div class="summary-title">
+                <h1>Summary</h1>
+            </div>
+            <div class="summary-para">
+            <p> In developing a bookkeeping application using Android Studio, we learned several
+                important skills that are applicable to many different types of app development.
+                For example, utilize the Google Maps API to track the user's current location,
+                implement both implicit and explicit intents to navigate between different app
+                activities and features, use shared preferences and SQLite database to store and
+                retrieve user data as well as manage the database reasonably and implement a
+                RecyclerView to present receipts and related data in an organized and user-friendly
+                manner.</p>
+            <p>Overall, this project helped us develop our skills in Android development,
+                programming, problem-solving, and testing and debugging for building a real-world
+                application. These skills are highly valuable for us as aspiring app developers</p>
+            </div>
         </div>
 
     </div>
