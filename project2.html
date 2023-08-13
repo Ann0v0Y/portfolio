@@ -30,10 +30,10 @@
                         <a href="styleguide.html" class="nav-main">case studies</a>
                         <!-- <span class="classes-icon"><img src="arrow.png" width="20"> </span> -->
                         <div class="dropdown-content">
-                          <a href="project1.html">Easy Accounting</a>
-                          <a href="project2.html">sVap</a>
+                            <a href="project1.html">Easy Accounting</a>
+                            <a href="project2.html">sVap</a>
                         </div>
-                      </div>
+                    </div>
 
 
                     <!-- </div>
@@ -79,280 +79,266 @@
 
 
     <div class="detail-section">
+
         <div class="overview">
-            <h2>Overview</h2>
-            <p>Svap is a website based in the Greater Vancouver area for people to trade
-                items with others. Users are allowed to post the item they want to trade
-                and show others what kind of item they want to trade with. Users can also
-                browse through the posts on the site to find the item they might be interested
-                in trading with. Our website also has a built-in chat that allows users to
-                contact the traders by asking questions and or arranging a meet up for trading.</p>
-            <p>In this web app, we used HTML and PHP for the basic front-end development with
-                CSS for styling. We also used Javascript (Jquery) to render the element on the
-                page dynamically based on the user's interaction and operation on the page to
-                enhance user experience. For best user experience, we use AJAX to send the
-                request from the front end to backend, and deal with the response with Javascript
-                (Jquery) from the backend to prevent refreshing the whole page. For the backend,
-                we developed in PHP to process the request and create, update, delete or store
-                the data in MySQL database.
-            </p>
+            <p class="overview-para">sVap is a website that facilitates item exchanges among
+                residents of Greater Vancouver. Users can browse items, communicate with each
+                other, and arrange exchanges.</p>
         </div>
 
-        <div class="basic-function">
-            <h2>How to go through</h2>
-            <p> We created a signup and log-in function for users to register their
-                accounts and used shared preference to store the user information so
-                that they can view their previous receipts when they log in. The shared
-                preference was also used for getting the data of specific receipts of a
-                specific user by checking the user_email. </p>
-            <p>We create a balance activity for users to manage their receipts by using
-                a recycler view to show it. Users can add a new receipt by clicking the add
-                button and they need to choose only one type of either expenditure or income,
-                date and amount to save the receipt successfully. Otherwise, toasted messages
-                will hint to them to complete the missing one. </p>
-            <p> If users choose two types for expenditure and income, respectively, the
-                checked button will be cleared when they click the save button and they can
-                choose again with a toasted message as a hint. We created two groups of buttons
-                by radio group.</p>
-            <p> We created a pop-up window for users to choose a date. The calendar date was
-                set until the current date so that users can only choose the date of today or
-                the previous date. The date function was triggered by clicking the date button.
-                The amount EditText was for users to enter numbers by using a numeric keypad
-                and comments for users to enter anything they wanted to note. </p>
-            <p> Once they finish and click the Done button, they can save the receipt, which
-                will be shown in the recycler view.</p>
-        </div>
 
-        <!-- <div class="standard-function">
-            <h2>SQL Database</h2>
-            <h3>Member</h3>
-            <p> The member table is to store the members’ personal information and be identified
-                by their email address, which is the primary key. It will be used to connect all
-                the other tables we have.</p>
-            <h3>Post</h3>
-            <p>Each post has their post_id as the primary key and also the user’s email address
-                who posts it to connect the post table with the member table. </p>
-            <h3>Message</h3>
-            <p> Each message that one user sends to another will have message_id as its primary
-                key and it connects to two users' email addresses, which are sender and receiver
-                respectively. </p>
-            <h3>Collection</h3>
-            <p> The collection table is basically connected to each user so that the collector_email
-                is just the email in the member table. The post_id is to connect the post table
-                since it is also necessary to store all the content of the post. The collection_id
-                is to identify each post which was collected in a specific user’s collection. All
-                three keys are the primary key in the collection table. </p>
-
-            <h3>Image-path</h3>
-            <p> The image_path table is to store the images in each post. The image_path is to
-                identify each image and the email and post_id are to connect it to the member table
-                and post table respectively. All three keys are the primary key in the image_path table.
-            </p>
-
-            <h3>want-to-trade</h3>
-            <p> The category in the want_to_trade table is to store what type of goods the user
-                wants to exchange. The post_id and email are for it to connect with the member
-                table and post table.</p>
-        </div> -->
-
-
-        <div class="standard-function">
-            <h2>Implementation Details</h2>
-            <div class="log-sign-img">
-                <img src="image/svap/login.png">
-                <img src="image/svap/signup.png">
+        <div class="video-section">
+            <div class="video-img-sec">
+                <video width="80%" height="auto" controls>
+                    <source src="image/P2/video.mp4" type="video/mp4">
+                </video>
             </div>
+            <div class="video-overview">
+                <div class="Proposal">
+                    <h3>Proposal</h3>
+                    <p> The website caters to visitors and members. Visitors can
+                        browse posts by category and keyword, view the latest items, and explore details.
+                        Members can log in, send messages, select categories, and post items.</p>
+                </div>
+                <div class="Technique Used">
+                    <h3>Technique Used</h3>
+                    <p> HTML, PHP, CSS, and JavaScript (jQuery) were used for
+                        front-end development. AJAX was employed for dynamic interactions. PHP processed
+                        requests and managed data in a MySQL database.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Data-Analysis">
+        <h2>Data Requirements Analysis & ER Diagram</h2>
+        <div class="er">
+            <div class="er-img">
+                <img src="image/p2/ER.png" alt="">
+            </div>
+            <div class="analysis">
+                <p>The "member" section handles user registration with
+                    email, preferred username, password, contact numbers, and Vancouver city
+                    location. Data is stored as varchars. </p>
+                <p> In "post," posts are identified by post_id, linked
+                    to user email. They include title, description, timestamp, and category for
+                    filtering. Decimal item values and image_paths are added, while categories
+                    define trading intentions. </p>
+                <p> "Message" connects users via emails with timestamps
+                    and read status. </p>
+                <p>"Collection" records user-collected posts with
+                    email and post_id. This architecture creates a dynamic Vancouver-based trading
+                    platform, encouraging engagement and interaction.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="database">
+        <h2>mySQL Database</h2>
+        <div class="sql">
+            <div class="sql-img">
+                <img src="image/p2/sql.png" alt="">
+            </div>
+            <div class="sql-intro">
+                <p class="cal-intro-para">collection(collection_id,collector_id, post_id)
+                    image_path(email, post_id, image_path) <br>
+                    member(email, name, password, phone, city) <br>
+                    message(time_stamp,content, sender_email, message_id, reciver_id, status) <br>
+                    post( email, post_id, title, description, date, category, value) <br>
+                    want_to_trade(email, post_id, category)</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="implementation-section">
+        <h2>Implementation details</h2>
+
+        <div class="imple">
             <h3>Login</h3>
-            <h4>Backend support</h4>
-            <p> When the backend receives the data that user input from the login form, it will
-                first detect if the input email existed in the member table. If the user email
-                existed in the table, then compare the password user entered with the hashed
-                password in this row with the PHP built in compare function. If the user email
-                does not exist in the table or password does not match, then send the error
-                message to the front end according to the type of error. If they both match,
-                then send a success message with a url if the last visited url data existed in
-                the session.</p>
-            <h4>Front end dynamic support/ajax</h4>
-            <p>The error message will directly display on the page with the dynamic support via Javascript. When the
-                user
-                clicks the login button and both fields are filled, the AJAX sends the input data to the backend to
-                process.
-                When the front end gets the response from the backend, it will firstly check if the message is
-                successful.
-                If the response back in AJAX is successful, then redirect the user to the last page visited if the url
-                is
-                not empty, or item list page if the url data from the response is empty. If the message is anything
-                other
-                than successful, then show the message on the page by modifying the error message element with Jquery.
-            </p>
+            <div class="imple-img">
+                <img src="image/p2/login1.png">
+                <img src="image/p2/login2.png">
+            </div>
 
+            <div class="back-front-intro">
+                <div class="backend">
+                    <p> The website caters to visitors and members. Visitors can
+                        browse posts by category and keyword, view the latest items, and explore details.
+                        Members can log in, send messages, select categories, and post items.</p>
+                </div>
+                <div class="frontend">
+                    <p> HTML, PHP, CSS, and JavaScript (jQuery) were used for
+                        front-end development. AJAX was employed for dynamic interactions. PHP processed
+                        requests and managed data in a MySQL database.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="imple">
             <h3>Register</h3>
-            <h4>Backend support</h4>
-            <p> When the backend gets the request, it will first check if the input email address
-                is already occupied in the data table. If it is occupied, the backend will respond
-                to an error message to the front end. If not, the backend will first hash the
-                password and then add all the input data to the member table, and respond with a
-                success message.</p>
-
-            <h4>Front end dynamic support/ajax</h4>
-            <p>The error message will directly display on the page with the dynamic support via
-                Javascript. When the user clicks the submit button and all fields are filled, the
-                AJAX sends the input data to the backend to process. When the front end gets the
-                response from the backend, it will firstly check if the message is successful. If
-                the response back in AJAX is successful, then redirect the user to the login page.
-                If the message is anything other than successful, then show the message on the
-                page by modifying the error message element with Jquery.
-            </p>
-
-            <h3>Browse</h3>
-
-            <div class="log-sign-img">
-                <img src="image/svap/filter.png">
-                <img src="image/svap/filter2.png">
+            <div class="imple-img">
+                <img src="image/p2/register1.png">
+                <img src="image/p2/register2.png">
             </div>
 
-            <h4>Backend support</h4>
-            <p> The backend will fetch all the post data from the database and render them on the
-                page based on the input in search and filter that user entered. By default, it
-                returns all the post data if search and filter input are empty. If a user entered
-                search keywords or filter category, the backend will use the dynamic query to get
-                the filtered post data and return the result to the front end as a string of html
-                elements. The rendered elements will include a star button to add to collection if
-                the login user is not the one who posted the post.
-            </p>
+            <div class="back-front-intro">
+                <div class="backend">
+                    <p> In the backend support, the backend checks if the provided email exists; if
+                        not, it hashes the password and adds data to the member table, responding with
+                        success. </p>
+                </div>
+                <div class="frontend">
+                    <p> For front end, errors display dynamically via JavaScript. On submit, AJAX sends
+                        data to the backend. If successful, the frontend redirects to the login page;
+                        otherwise, it displays messages using jQuery.</p>
+                </div>
+            </div>
+        </div>
 
-            <h4>Front end dynamic support/ajax</h4>
-            <p>Every sub category has a main category as a checkbox. When the user clicks the main
-                category check box, the Javascript will automatically select all the subcategories
-                for the user. If the user clicks the search or filter result button, the input will
-                be send to the backend and get the response of the posts list elements that should
-                be rendered via AJAX. Then Jquery will change the post area elements to a returned
-                post list element.
-            </p>
 
-            <h3>Add a New Post</h3>
-
-            <div class="log-sign-img">
-                <img src="image/svap/newpo.png">
-                <img src="image/svap/newpo2.png">
+        <div class="imple">
+            <h3>Browsing / Filter / Search</h3>
+            <div class="imple-img">
+                <img src="image/p2/filter1.png">
+                <img src="image/p2/filter2.png">
             </div>
 
-            <h4>Backend support</h4>
-            <p> With the input data from the user, the backend will firstly insert all the basic
-                data to the post table and want_to_trade table. Then the backend will add the input
-                image file to the server storage folder and then return an array containing all the
-                image paths of the image. After the storage backend will add all the image path data
-                to the image_path table in the database and respond with a success message.
-            </p>
+            <div class="back-front-intro">
+                <div class="backend">
+                    <p> For backend support, the backend fetches and displays post data based on user
+                        search and filter input. Default shows all posts, while search/filter inputs
+                        refine results via dynamic queries. Rendered elements include a star button
+                        for non-post owners. </p>
+                </div>
+                <div class="frontend">
+                    <p> For front end, clicking a main category checkbox auto-selects subcategories.
+                        Search/filter button sends input to backend for AJAX response rendering posts
+                        via jQuery.</p>
+                </div>
+            </div>
+        </div>
 
-            <h4>Front end dynamic support/ajax</h4>
-            <p>The front end will use Javascript to dynamically show the image that the user
-                uploaded to the input file and then compress the image file. When a user clicks
-                the delete button on the image, the Javascript will remove the image from the
-                view on the page and remove the file from the input. When a user clicks the submit
-                button, the Javascript sends the request with AJAX and directs the user to the
-                home page if a success response is received from the backend, otherwise it
-                displays the error message.
-            </p>
 
+
+        <div class="imple">
+            <h3>Add new post</h3>
+            <div class="imple-img">
+                <img src="image/p2/addnew1.png">
+                <img src="image/p2/addnew2.png">
+            </div>
+
+            <div class="back-front-intro">
+                <div class="backend">
+                    <p> For backend support, user input is used to insert data into post and
+                        want_to_trade tables. Images are stored, paths added to the database,
+                        and a success message is sent. </p>
+                </div>
+                <div class="frontend">
+                    <p> For front end, JavaScript handles dynamic image display, compression,
+                        and deletion. AJAX requests trigger page redirection or error message
+                        display based on backend response.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="imple">
             <h3>Chat</h3>
-
-            <div class="log-sign-img">
-                <img src="image/svap/chat.png">
-                <img src="image/svap/detail.png">
+            <div class="imple-img">
+                <img src="image/p2/chat.png">
             </div>
 
-            <h4>Backend support</h4>
-            <p> The backend uses a different query to fetch or modify the data from the database
-                based on the request command. The included command includes get contact, get
-                messages, get unread count and insert message. The backend will transform the
-                list of data returned from the database and transform them into a string of html
-                elements and then send the response back to the front end. When the show user
-                chat command is processed, the backend will also change all the status of the
-                messages that will be shown to 0 which means changing them from unread to read.
-            </p>
-
-            <h4>Front end dynamic support/ajax</h4>
-            <p>Every one second, the AJAX will send the request to the backend for updating the
-                unread message and the list of messages that the user currently interacts with,
-                and replace the front end element with the html elements from the string via
-                Jquery. When the user clicks on a contact on the page, the Javascript will send
-                the request to the backend via AJAX to get all the messages data and then render
-                the data from the response to the chat container. When the send message button
-                is clicked, the AJAX request backend will insert the message with the sender
-                email (login user) and receiver email (the current active contact element), and
-                then if the response is successful, add the chat message to the message container
-                on the page.
-            </p>
+            <div class="back-front-intro">
+                <div class="backend">
+                    <p> For backend support, the backend uses various commands like fetching contact 
+                        information, messages, and unread counts, as well as inserting messages. 
+                        Retrieved data is transformed into HTML elements and sent to the frontend. 
+                        The "show user chat" command marks messages as read.  </p>
+                </div>
+                <div class="frontend">
+                    <p> For front end,  AJAX updates unread messages and user interactions, using 
+                        jQuery to replace elements and render messages. User actions trigger AJAX 
+                        requests to retrieve and display messages, and successful responses add chat 
+                        messages to the container.</p>
+                </div>
+            </div>
+        </div>
 
 
+        <div class="imple">
+            <h3>View Detail Page</h3>
+            <div class="imple-img">
+                <img src="image/p2/detail.png">
+            </div>
 
-            <h3>View Page Detail</h3>
-
-            <h4>Backend support</h4>
-            <p> The backend will get the post detail information from the database with the post
-                id which is included in the get request. Then respond with a string of html
-                elements to render the elements at the front end. Moreover, if the user is logged
-                in and not the owner of the post, a like/unlike button element will be added to
-                the string based on if this post is in the collection table or not. If this user
-                is the owner of the post a delete button will be added to the string.. If the user
-                did not log in, no button will be added to the string.</p>
-
-            <h4>Front end dynamic support/ajax</h4>
-            <p>If the user clicks on the like button, the request will be sent via AJAX to add the
-                post to the database. If the response is successful, then Jquery will change the
-                like button to unlike button. If the button is delete, then send the delete request
-                via AJAX, if it is successful, then direct the user to the main page. If the user
-                clicks on the message button, the user will be directed to the chat page and initialize
-                a chat.
-            </p>
+            <div class="back-front-intro">
+                <div class="backend">
+                    <p> For backend support, the backend retrieves detailed post information from the 
+                        database based on a get request. It responds with HTML elements for frontend 
+                        rendering, including a like/unlike button if the user is logged in but not the 
+                        post owner, or a delete button for the owner. </p>
+                </div>
+                <div class="frontend">
+                    <p> For front end,  clicking the like button sends an AJAX request to add the post 
+                        to the database; if successful, the button changes. Clicking delete triggers 
+                        a delete request and redirects to the main page. Clicking the message button 
+                        directs the user to initiate a chat on the chat page.</p>
+                </div>
+            </div>
+        </div>
 
 
+        <div class="imple">
             <h3>Add/Remove Favorite Posts /View Favourites</h3>
-
-            <div class="log-sign-img">
-                <img src="image/svap/add:remove.png">
-                <img src="image/svap/delete.png">
+            <div class="imple-img">
+                <img src="image/p2/collect1.png">
+                <img src="image/p2/collect2.png">
             </div>
 
-            <h4>Backend support</h4>
-            <p> When an add or remove favorite post request is sent to the backend, the query will
-                be executed to insert/delete the post id with user email from the collection database.
-                If the user did the operation through the view's favorite page, a response with the
-                new string containing a list of collection post elements will be sent.</p>
+            <div class="back-front-intro">
+                <div class="backend">
+                    <p> For backend support, the backend handles add or remove favorite post requests 
+                        by executing queries to insert/delete post IDs with user emails in the 
+                        collection database. Response includes a new string with a list of collection 
+                        post elements for operations via the favorite page. </p>
+                </div>
+                <div class="frontend">
+                    <p> For front end, clicking like/unlike buttons triggers AJAX requests to modify 
+                        the database. Successful response updates the button appearance. On the 
+                        favorite list page, AJAX response replaces and displays the new list of post 
+                        items in the container.</p>
+                </div>
+            </div>
+        </div>
 
-            <h4>Front end dynamic support/ajax</h4>
-            <p>If the user clicks on the like button, the request will be sent via AJAX to add the
-                post to the database. If the response is successful, then Jquery will change the like
-                button to unlike button. If the user clicks on the unlike button, the request will be
-                sent via AJAX to remove the post from the collection table. If the response is successful,
-                then Jquery will change the unlike button to like button. If the user is at the view's
-                favorite list page, the backend will replace the list container with the new list of post
-                items from the AJAX response and display them on the page.
-            </p>
-
-
-
+        <div class="imple">
             <h3>Delete Post/View my post</h3>
+            <div class="imple-img">
+                <img src="image/p2/delete.png">
+            </div>
 
-            <h4>Backend support</h4>
-            <p> When an add or remove post request is sent to the backend, the query will be executed
-                to insert/delete the data with the input post id from the post, image_path, collection
-                and want_to_trade table. Then the backend will delete the image folder and all the files
-                inside related to the file path which contains user id the post as folder. Then the backend
-                gets the new list of posts the user has posted and responds with a string containing the
-                html elements of the post list.</p>
-
-            <h4>Front end dynamic support/ajax</h4>
-            <p>If the user clicks on the delete button, the Javascript sends the request via AJAX to the
-                backend for deleting the data. If the request is successfully done, the Jquery will replace
-                the elements in the list container with the response data to show the updated list of post
-                data after the deletion on the web page.
-            </p>
+            <div class="back-front-intro">
+                <div class="backend">
+                    <p> For backend support, when an add or remove post request is received, the 
+                        backend executes queries to insert/delete data associated with the input post 
+                        ID from various tables. It also deletes related image files from the user's 
+                        folder. The backend then fetches the user's updated post list and responds 
+                        with HTML elements representing the posts. </p>
+                </div>
+                <div class="frontend">
+                    <p> For front end, clicking the delete button triggers an AJAX request to the 
+                        backend for data deletion. Upon success, Jquery replaces list container 
+                        elements with the updated post data, reflecting the changes on the webpage.</p>
+                </div>
+            </div>
         </div>
 
     </div>
 
+    <script src="project1.js"></script>
 </body>
 
 

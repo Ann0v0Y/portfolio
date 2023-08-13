@@ -68,18 +68,17 @@
     </div>
 
     <div class="container">
-        <img class="image image1" src="image/P1/account-new.png" alt="Image 1" style="top: 0%;">
-        <img class="image image2" src="image/P1/adding-new.png" alt="Image 2" style="top: 0%;">
-        <img class="image image2" src="image/P1/yahoo.png" alt="Image 2" style="top: 0%;">
-        <img class="image image2" src="image/P1/balance-new.png" alt="Image 2" style="top: 0%;">
-        <img class="image image2" src="image/P1/map-search.png" alt="Image 2" style="top: 0%;">
+        <img class="image image1" src="image/P1/adding-new.png" alt="Image 1" style="top: 0%;">
+        <img class="image image2" src="image/P1/calculator-new.png" alt="Image 2" style="top: 0%;">
+        <img class="image image2" src="image/ea-homepage.png" alt="Image 2" style="top: 0%;">
+        <img class="image image2" src="image/ea-home.png" alt="Image 2" style="top: 0%;">
+        <img class="image image2" src="image/P1/signup.png" alt="Image 2" style="top: 0%;">
     </div>
-    <script src="project1.js"></script>
 
 
     <div class="detail-section">
         <div class="overview">
-            <p>We created several functions for this accounting app by using Android Studio.
+            <p class="overview-para">We created several functions for this accounting app by using Android Studio.
                 Including basic functions for user to record their balance, keep their own records
                 and other extra functions to help them use the app easier.</p>
         </div>
@@ -89,11 +88,12 @@
             <div class="basic-signin">
                 <div class="signin-img-sec">
                     <img src="image/ea-home.png" alt="">
+                    <img src="image/P1/signup.png" alt="">
                     <img src="image/ea-homepage.png" alt="">
-                    <img src="image/P1/account-new.png" alt="">
                 </div>
                 <div class="signin-intro">
-                    <p> For users to register their accounts and used shared preference to store
+                    <h3>Sign in & Sign up</h3>
+                    <p class="signin-intro-para"> For users to register their accounts and used shared preference to store
                         the user information so that they can view their previous receipts when
                         they log in. The shared preference was also used for getting the data of
                         specific receipts of a specific user by checking the user_email.</p>
@@ -103,11 +103,12 @@
 
             <div class="basic-balance">
                 <div class="balance-img-sec">
-                    <img src="image/ea-home.png" alt="">
-                    <img src="image/ea-homepage.png" alt="">
+                    <img src="image/P1/balance-new.png" alt="">
+                    <img src="image/P1/adding-new.png" alt="">
                 </div>
                 <div class="balance-intro">
-                    <p> For users to manage their receipts by using a recycler view to show it.
+                    <h3>Balance</h3>
+                    <p class="balance-intro-para"> For users to manage their receipts by using a recycler view to show it.
                         Users can add a new receipt by clicking the add button and they need to
                         choose only one type of either expenditure or income, date and amount to
                         save the receipt successfully. Otherwise, toasted messages will hint to
@@ -118,16 +119,19 @@
 
             <div class="basic-video">
                 <div class="video-img-sec">
-                    <img src="image/ea-home.png" alt="">
+                    <video width="280" height="auto"  controls>
+                        <source src="image/P1/video.mov" type="video/mp4">
+                      </video>
                 </div>
                 <div class="video-intro">
-                    <p> Users can only select one type for a record . Otherwise the selection will
+                    <h3>Adding page</h3>
+                    <p class="video-intro-para"> Users can only select one type for a record . Otherwise the selection will
                         be cleared when they click save, accompanied by a toast message.</p>
-                    <p>A popup window for the user to select a date, default as the current date.
+                    <p class="video-intro-para1">A popup window for the user to select a date, default as the current date.
                         The user can only select today's date or the previous day's date. </p>
-                    <p>The Amount is for users to enter numbers using the numeric keypad and provides
+                    <p class="video-intro-para2">The Amount is for users to enter numbers using the numeric keypad and provides
                         comments for the user to enter whatever they want to record.</p>
-                    <p>Once users are done and click the Done button, they can save the receipt and
+                    <p class="video-intro-para3">Once users are done and click the Done button, they can save the receipt and
                         the receipt will be displayed in the previous page.</p>
                 </div>
             </div>
@@ -138,46 +142,49 @@
             <h2>Standard Function</h2>
             <div class="standard-cal">
                 <div class="cal-img-sec">
-                    <img src="image/ea-home.png" alt="">
                     <img src="image/ea-homepage.png" alt="">
-                    <img src="image/P1/account-new.png" alt="">
+                    <img src="image/P1/adding-new.png" alt="">
+                    <img src="image/P1/calculator-new.png" alt="">
                 </div>
                 <div class="cal-intro">
-                    <p> Users can either use the calculator to calculate the amount by entering the
+                    <h3>Calculator</h3>
+                    <p class="cal-intro-para"> Users can either use the calculator to calculate the amount by entering the
                         page via homepage or adding page.</p>
-                    <p>After getting the amount, user can click KEEP IT to save the number directly.</p>
-                    <p>Users can click ‘back’ to back to homepage as well.</p>
+                    <p class="cal-intro-para1">After getting the amount, user can click KEEP IT to save the number directly.</p>
+                    <p class="cal-intro-para2">Users can click ‘back’ to back to homepage as well.</p>
                 </div>
             </div>
 
 
             <div class="standard-map">
                 <div class="map-img-sec">
-                    <img src="image/ea-home.png" alt="">
-                    <img src="image/ea-homepage.png" alt="">
+                    <img src="image/P1/map.initial.png" alt="">
+                    <img src="image/P1/map-search.png" alt="">
                 </div>
                 <div class="map-intro">
-                    <p> Users can either use the map to record comment by entering the page via
+                    <h3>Map</h3>
+                    <p class="map-intro-para"> Users can either use the map to record comment by entering the page via
                         homepage or adding page. When they are around ambient environment, especially
                         when they are traveling, which probably are the times when they spend the
                         most and records are most necessary. </p>
-                    <p>The initial location is the current location of the user.</p>
-                    <p>Users can search the specific location by input address.</p>
+                    <p class="map-intro-para1">The initial location is the current location of the user.</p>
+                    <p class="map-intro-para2">Users can search the specific location by input address.</p>
                 </div>
             </div>
 
 
             <div class="standard-finding">
                 <div class="finding-img-sec">
-                    <img src="image/ea-home.png" alt="">
-                    <img src="image/ea-home.png" alt="">
+                    <img src="image/P1/finding.new.png" alt="">
+                    <img src="image/P1/yahoo.png" alt="">
                 </div>
                 <div class="finding-intro">
-                    <p> The activity mainly relying on implicit intent. Our original intention is to
+                    <h3>Finding page</h3>
+                    <p class="find-intro-para"> The activity mainly relying on implicit intent. Our original intention is to
                         allow users to keep track of their bills while also getting some real-time
                         financial news and financial knowledge through our software. That way they
                         can better manage their finances. </p>
-                    <p>There’s also a link to live exchange rate queries in case users might have
+                    <p class="find-intro-para1"> There’s also a link to live exchange rate queries in case users might have
                         receipts of foreign exchange receipts and expenditures.</p>
                 </div>
             </div>
@@ -185,13 +192,14 @@
 
             <div class="standard-mode">
                 <div class="mode-img-sec">
-                    <img src="image/ea-home.png" alt="">
-                    <img src="image/ea-home.png" alt="">
-                    <img src="image/ea-home.png" alt="">
+                    <img src="image/ea-account.png" alt="">
+                    <img src="image/P1/balance-new.png" alt="">
+                    <img src="image/P1/detail-nigh.png" alt="">
                 </div>
                 <div class="mode-intro">
-                    <p> Users can log out in account page.</p>
-                    <p>The mode will switch when light constant reach to 20000 lux.</p>
+                    <h3>light&Night Mode</h3>
+                    <p class="mode-intro-para"> Users can log out in account page.</p>
+                    <p class="mode-intro-para1">The mode will switch when light constant reach to 20000 lux.</p>
                 </div>
             </div>
         </div>
@@ -202,7 +210,7 @@
         <div class="challenge">
             <div class="prob">
                 <h2>Challenge</h2>
-                <p> During the implementation of our bookkeeping application, we encountered an
+                <p class="challenge-para"> During the implementation of our bookkeeping application, we encountered an
                     interesting challenge related to the display of receipt data from multiple
                     users. Specifically, we found that all receipt data from different users were
                     being shown together in the RecyclerView since we had just users table and
@@ -210,14 +218,14 @@
             </div>
             <div class="solution">
                 <h2>Solution</h2>
-                <p>Creating a separate table for each user is not a practical solution as it would
+                <p class="solution-para">Creating a separate table for each user is not a practical solution as it would
                     lead to severe data redundancy and make managing and organizing data difficult.
                     Instead, we implemented a foreign key SQLite statement that joins the receipts
                     table to a separate user table. By adding user_email as a primary key to the
                     user table and a foreign key to the receipts table, we were able to link each
                     receipt record to the corresponding user record. This allows users to view receipt
                     data for their account only.</p>
-                <p> This solved the challenge of displaying receipt data from multiple users and also
+                <p class="solution-para1"> This solved the challenge of displaying receipt data from multiple users and also
                     improved the overall organization and management of data in our application.</p>
             </div>
         </div>
@@ -244,6 +252,7 @@
 
     </div>
 
+    <script src="project1.js"></script>
 </body>
 
 

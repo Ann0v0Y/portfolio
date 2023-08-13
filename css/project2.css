@@ -1,3 +1,8 @@
+/* 
+*p{
+    text-indent: 50px;
+} */
+
 .intro2 {
     padding: 10vh 0;
     margin: 0 5rem;
@@ -26,6 +31,165 @@
     display: flex;
     justify-content: space-between;
 }
+
+
+/* video section  */
+.video-section{
+    margin:3rem 7rem;
+}
+
+.video-img-sec{
+    margin:5rem 0;
+    /* border: 1px solid red; */
+}
+
+.video-overview{
+    display: flex;
+}
+
+.video-overview div{
+    margin: 0 3rem;
+}
+
+.video-overview h3{
+    display: flex;
+    justify-content: center;
+}
+
+.video-overview p{
+    text-indent: 50px;
+}
+/* end of video section  */
+
+
+/* data analysis section  */
+.Data-Analysis{
+    margin: 5rem 7rem;
+}
+.er-img{
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.er-img img{
+    max-width: 70vw;
+}
+
+.analysis{
+    /* border:1px solid red; */
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 0;
+}
+
+.analysis p{
+    width: 80%;
+    align-self: center;
+    text-indent: 50px;
+}
+/* end of data analysis  */
+
+
+/* database section  */
+.database{
+    margin:0 7rem;
+}
+
+.sql-intro{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sql-img img{
+    max-width: 100%;
+}
+
+.cal-intro-para{
+    transform: translateX(-150px);
+}
+
+.cal-intro-para-visible{
+    transform: translateX(0px);
+}
+/* end of database section  */
+
+
+/* implementation-section */
+.implementation-section{
+    margin:3rem 7rem;
+}
+
+.imple h3{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+.imple-img{
+    display: flex;
+    justify-content: space-around;
+}
+
+.imple-img img{
+    max-width: 40vw;
+}
+
+.back-front-intro{
+    display: flex;
+    justify-content: space-around;
+    margin:4rem 0;
+    padding:2rem 0;
+    border-top: 4px solid white;
+}
+
+.backend{
+    display: flex;
+    justify-content: center;
+}
+
+.frontend{
+    display: flex;
+    justify-content: center;
+}
+
+.back-front-intro p{
+    width: 80%;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .video-overview{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imple-img{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imple-img img{
+        max-width: 80vw;
+    }
+
+    .back-front-intro{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Adjust the margin and set flex direction to column for smaller screens */
+    .log-sign-img{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .log-sign-img img{
+        margin-bottom: 2rem;
+    }
+}
+
 
 
 @media screen and (max-width: 1100px) {

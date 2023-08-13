@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     line2.classList.remove('fade-out');
   }
 
+
   function fadeInOnScroll() {
     const windowHeight = window.innerHeight;
     const paragraphOffset = paragraph.getBoundingClientRect().top;
@@ -73,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+
   function fadeInOnScrollTitle() {
     const windowHeight = window.innerHeight;
     const paragraphOffset = paragraph.getBoundingClientRect().top;
@@ -83,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
       title.classList.remove("fade-in-title-visible"); // Remove the class if the element is not in view
     }
   }
-
 
 
   window.addEventListener('scroll', checkFade);
