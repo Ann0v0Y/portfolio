@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const paragraph10 = document.querySelector(".mode-intro-para");
     const paragraph101 = document.querySelector(".mode-intro-para1");
-    
+
 
 
 
@@ -34,10 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
         let scrollTop = window.scrollY;
         let images = document.querySelectorAll('.image');
         let offset = scrollTop * 0.5; //调整分开速度
-        images[0].style.transform = `translateX(calc(-50% - ${offset * 0.9}px))`;
-        images[1].style.transform = `translateX(calc(-50% + ${offset * 0.9}px))`;
-        images[3].style.transform = `translateX(calc(-50% - ${offset * 1.8}px))`;
-        images[4].style.transform = `translateX(calc(-50% + ${offset * 1.8}px))`;
+        if (scrollTop < windowHeight * 0.8) {
+            images[0].style.transform = `translateX(calc(-50% - ${offset * 0.9}px))`;
+            images[4].style.transform = `translateX(calc(-50% + ${offset * 1.8}px))`;
+            images[1].style.transform = `translateX(calc(-50% + ${offset * 0.9}px))`;
+            images[3].style.transform = `translateX(calc(-50% - ${offset * 1.8}px))`;
+        }
     }
 
 
@@ -98,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
             paragraph72.classList.add("cal-intro-para2-visible");
         } else {
             paragraph7.classList.remove("cal-intro-para-visible");
-            paragraph71.classList.remove("cal-intro-para1-visible"); 
+            paragraph71.classList.remove("cal-intro-para1-visible");
             paragraph72.classList.remove("cal-intro-para2-visible"); // Remove the class if the element is not in view
         }
     }
@@ -113,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
             paragraph82.classList.add("map-intro-para2-visible");
         } else {
             paragraph8.classList.remove("map-intro-para-visible");
-            paragraph81.classList.remove("map-intro-para1-visible"); 
+            paragraph81.classList.remove("map-intro-para1-visible");
             paragraph82.classList.remove("map-intro-para2-visible"); // Remove the class if the element is not in view
         }
     }
@@ -126,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
             paragraph91.classList.add("find-intro-para1-visible");
         } else {
             paragraph9.classList.remove("find-intro-para-visible");
-            paragraph91.classList.remove("find-intro-para1-visible"); 
+            paragraph91.classList.remove("find-intro-para1-visible");
         }
     }
 
@@ -138,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
             paragraph101.classList.add("mode-intro-para1-visible");
         } else {
             paragraph10.classList.remove("mode-intro-para-visible");
-            paragraph101.classList.remove("mode-intro-para1-visible"); 
+            paragraph101.classList.remove("mode-intro-para1-visible");
         }
     }
 

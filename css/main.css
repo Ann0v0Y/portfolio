@@ -24,11 +24,34 @@ h4 {
     display: flex;
     /* flex-direction: column; */
     justify-content: space-between;
+    /* border:1px solid red; */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10;
 }
 
 .nav-ele {
     font-family: 'Playfair Display SC', serif;
     color: white;
+    flex: 1;
+    text-align: center;
+}
+
+.nav-ele:first-child {
+    text-align: left;
+}
+
+.nav-ele:nth-child(2){
+    flex:2;
+    text-align: center;
+}
+
+
+.nav-ele:last-child {
+    text-align: center;
 }
 
 .nav-ele a,
@@ -124,6 +147,7 @@ text-decoration: underline;
 
 /* footer section  */
 .footer {
+    /* border:1px solid red; */
     display: flex;
     justify-content: space-between;
     margin: 3rem 3rem;
